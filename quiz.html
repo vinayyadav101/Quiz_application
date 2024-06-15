@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="quiz.css">
+    <script src="quiz.js"></script>
+</head>
+<body>
+    <div id="main_container" class="main_container">
+        <div id="start" onclick="Start_quiz()">start</div>
+        <div class="inner_container display" id="inner_container">
+            <div class="quiz">
+                <h1>Quize App</h1>
+                <div class="quation_score">
+                    <span>question:<span id="currentQuation"> 0</span><span id="total_quation"></span></span>
+                    <span>Score:<span id="score"> 0</span></span>
+                </div>
+            </div>
+            <div id="quation" class="quation"> Quation</div>
+            <div id="option" class="options">
+                <div class="option1_border" id="option1" onclick="chackAnswer(0 , quations)">first</div>
+                <div class="option_border" id="option2" onclick="chackAnswer(1 , quations)">second</div>
+                <div class="option_border" id="option3" onclick="chackAnswer(2 , quations)">third</div>
+                <div class="option_border" id="option4" onclick="chackAnswer(3 , quations)">four</div>
+            </div>
+            <div class="Next_quation" id="next" onclick="NextQuation()">Next</div>
+            <div class="submit display" id="button" onclick="submitQuiz()">Submit</div>
+        </div>
+        <div id="result" class="display">
+            <h1 id="result_msg"></h1>
+            <h3>youre score is:<span id="total_score"></span></h3>
+            <div class="restart" onclick="restart_quiz()"> restart</div>
+        </div>
+    </div>
+</body>
+</html>
